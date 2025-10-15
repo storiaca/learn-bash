@@ -14,7 +14,7 @@
 [2025-06-01 08:25:48] [ERROR] Insufficient disk space for file upload
 [2025-06-01 08:25:49] [INFO] Cleanup job started for /tmp directory
 [2025-06-01 08:26:12] [INFO] Freed 1.2 GB of disk space
-[2025-06-01 08:26:14] [INFO] Retrying file upload: annual_report.pdf
+[2025-06-01 08:26:14] [INFO] Retrying file upload at: annual_report.pdf
 [2025-06-01 08:26:29] [INFO] File upload completed successfully
 [2025-06-01 08:30:00] [INFO] Scheduled backup job started
 [2025-06-01 08:32:13] [CRITICAL] Database connection lost during backup
