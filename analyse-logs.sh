@@ -1,25 +1,29 @@
 #!/bin/bash
 
+LOG_DIR="/home/aca/learn-bash/logs"
+APP_LOG_FILE="application.log"
+SYS_LOG_FILE="system.log"
+
 echo "Analysing log files"
 echo "==================="
 
 echo -e "\nList of log files updated in last 24 hours"
-find /home/aca/learn-bash/logs -name “*.log” -mtime -1
+find $LOG_DIR -name “*.log” -mtime -1
 
 echo -e "\nSearching ERROR logs in application.log file" 
-grep "ERROR" /home/aca/learn-bash/logs/application.log
+grep "ERROR" "$LOG_DIR/$APP_LOG_FILE"
 
 echo -e "\nNumber of ERROR logs found in application.log"
-grep -c "ERROR" /home/aca/learn-bash/logs/application.log
+grep -c "ERROR" "$LOG_DIR/$APP_LOG_FILE"
 
 echo -e "\nNumber of FATAL logs found in application.log" 
-grep -c "FATAL" /home/aca/learn-bash/logs/application.log
+grep -c "FATAL" "$LOG_DIR/$APP_LOG_FILE"
 
 echo -e "\nNumber of FATAL logs found in system.log"
-grep -c "FATAL" /home/aca/learn-bash/logs/system.log
+grep -c "FATAL" "$LOG_DIR/$SYS_LOG_FILE"
 
 echo -e "\nNumber of CRITICAL logs found in system.log"
-grep -c "CRITICAL" /home/aca/learn-bash/logs/system.log
+grep -c "CRITICAL" "$LOG_DIR/$SYS_LOG_FILE"
 
 echo -e "\nCRITICAL logs found in system.log"
-grep "CRITICAL" /home/aca/learn-bash/logs/system.log
+grep "CRITICAL" "$LOG_DIR/$SYS_LOG_FILE"
